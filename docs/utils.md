@@ -5,3 +5,6 @@
 -- ternjs
 -- atom beautify
 -- vim-jsx
+
+
+https://orktes.github.io/atom-react/
