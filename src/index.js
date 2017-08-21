@@ -1,15 +1,23 @@
 import React from 'react';
 import { render } from 'react-dom';
 
-class App extends React.Component {
-    render() {
-        return(
-                <h1>Hello</h1>
-        )
-    }
+//Components
+import App from './components/App';
+import ErrorNotFound from './components/ErrorNotFound';
+
+//Router
+import { BrowserRouter as Router, Route } from 'react-router-dom';
+import './style.css';
+
+const Root = () =>{
+    return (
+        <Router>
+            <div>
+                <Route exact path="/" component={App} />
+            </div>
+        </Router>
+    )
 }
 
 render(
-    <App />,
-document.getElementById('root')
-);
+    <Root />, document.getElementById('root'));
