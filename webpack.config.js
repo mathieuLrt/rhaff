@@ -5,7 +5,10 @@ module.exports = {
     entry: './src/index.js',
     devtool: 'inline-source-map',
     devServer: {
-        contentBase: './dist'
+        contentBase: './dist',
+        proxy: {
+          "/api": "http://localhost:3001"
+        }
     },
     output: {
         filename: 'bundle.js',
